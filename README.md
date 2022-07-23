@@ -11,7 +11,22 @@ Supports cross-domain, chunked and resumable file uploads and client-side image 
 ### - Usage example
 
 ```php
-if ($request->hasFile('files')) {
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Classes\UploadHandler;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Illuminate\Support\Env;
+use Intervention\Image\Facades\Image;
+
+class YourController extends UploadHandler
+{
+
+    public function upload(Request $request)
+    {
+            if ($request->hasFile('files')) {
 
             // seting options for your upload, where to place uploaded images (dir), options can be extended via UploadHabdler class
             $this->setoptions = array(
@@ -91,3 +106,7 @@ if ($request->hasFile('files')) {
             
             return $response;
         }
+        
+     }
+        
+}
