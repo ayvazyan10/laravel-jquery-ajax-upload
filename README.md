@@ -5,8 +5,9 @@ Supports cross-domain, chunked and resumable file uploads and client-side image 
 
 ## -- Short installation instruction
 
-1. Download and place UploadHandler.php to app/Classes/UploadHandler.php
-2. Extend it in your controller (class YourController extends UploadHandler)
+1. Download jquery file upload from https://blueimp.github.io/jQuery-File-Upload/
+2. Download and place UploadHandler.php to app/Classes/UploadHandler.php
+3. Extend it in your controller (class YourController extends UploadHandler)
 
 ### - Usage example
 
